@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Я люблю тебе</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      color: #e60073;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    .heart {
+      font-size: 60px;
+      cursor: pointer;
+      animation: blink 1s infinite;
+      color: red;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 30px;
+    }
+
+    .hidden img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .caption {
+      font-size: 32px;
+      margin-top: 15px;
+      color: #e60073;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Я люблю тебе</h1>
+  <div class="heart" onclick="showCat()">❤️</div>
+  <div class="caption">Нажми</div>
+
+  <div class="hidden" id="catSection">
+    <img src="image.png" alt="Кицька" />
+    <div class="caption">кицька</div>
+  </div>
+
+  <script>
+    function showCat() {
+      document.getElementById('catSection').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
